@@ -50,6 +50,7 @@ class WorkspaceUserPreferenceViewSet(BaseAPIView):
                                     WorkspaceUserPreference.UserPreferenceKeys.DRAFTS,
                                     WorkspaceUserPreference.UserPreferenceKeys.YOUR_WORK,
                                     WorkspaceUserPreference.UserPreferenceKeys.STICKIES,
+                                    WorkspaceUserPreference.UserPreferenceKeys.CRM,
                                 ]
                                 else False
                             ),

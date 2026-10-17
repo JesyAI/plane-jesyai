@@ -36,6 +36,8 @@ from plane.app.views import (
     WorkspaceHomePreferenceViewSet,
     WorkspaceStickyViewSet,
     WorkspaceUserPreferenceViewSet,
+    CrmLeadViewSet,
+    CrmCompanyViewSet,
 )
 
 
@@ -250,6 +252,27 @@ urlpatterns = [
         "workspaces/<str:slug>/stickies/<uuid:pk>/",
         WorkspaceStickyViewSet.as_view({"get": "retrieve", "patch": "partial_update", "delete": "destroy"}),
         name="workspace-sticky",
+    ),
+    # CRM
+    path(
+        "workspaces/<str:slug>/crm/leads/",
+        CrmLeadViewSet.as_view({"get": "list", "post": "create"}),
+        name="workspace-crm-leads",
+    ),
+    path(
+        "workspaces/<str:slug>/crm/leads/<uuid:pk>/",
+        CrmLeadViewSet.as_view({"get": "retrieve", "patch": "partial_update", "delete": "destroy"}),
+        name="workspace-crm-lead",
+    ),
+    path(
+        "workspaces/<str:slug>/crm/companies/",
+        CrmCompanyViewSet.as_view({"get": "list", "post": "create"}),
+        name="workspace-crm-companies",
+    ),
+    path(
+        "workspaces/<str:slug>/crm/companies/<uuid:pk>/",
+        CrmCompanyViewSet.as_view({"get": "retrieve", "patch": "partial_update", "delete": "destroy"}),
+        name="workspace-crm-company",
     ),
     # User Preference
     path(

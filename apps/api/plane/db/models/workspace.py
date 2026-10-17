@@ -425,6 +425,7 @@ class WorkspaceUserPreference(BaseModel):
         YOUR_WORK = "your_work", "Your Work"
         ARCHIVES = "archives", "Archives"
         STICKIES = "stickies", "Stickies"
+        CRM = "crm", "CRM"
 
     workspace = models.ForeignKey(
         "db.Workspace",

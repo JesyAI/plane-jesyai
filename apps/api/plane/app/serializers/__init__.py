@@ -29,6 +29,7 @@ from .workspace import (
     WorkspaceHomePreferenceSerializer,
     StickySerializer,
 )
+from .crm import CrmLeadSerializer, CrmCompanySerializer
 from .project import (
     ProjectSerializer,
     ProjectListSerializer,

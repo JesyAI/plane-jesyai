@@ -89,4 +89,6 @@ from .device import Device, DeviceSession
 
 from .sticky import Sticky
 
+from .crm import CrmCompany, CrmLead
+
 from .description import Description, DescriptionVersion
